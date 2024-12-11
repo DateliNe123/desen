@@ -1,0 +1,7 @@
+<h1>{% if form.instance.pk %}Editar Caso{% else %}Novo Caso{% endif %}</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Salvar</button>
+    <a href="{% url 'lista_casos' %}">Cancelar</a>
+</form>

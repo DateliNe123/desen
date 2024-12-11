@@ -1,0 +1,12 @@
+<h1>Lista de Advogados</h1>
+<a href="{% url 'criar_advogado' %}">Novo Advogado</a>
+<ul>
+    {% for advogado in advogados %}
+        <li>
+            {{ advogado.nome }} - 
+            <a href="{% url 'editar_advogado' advogado.pk %}">Editar</a> | 
+            <a href="{% url 'excluir_advogado' advogado.pk %}">Excluir</a>
+        </li>
+    {% endfor %}
+</ul>
+<a href="{% url 'pagina_inicial' %}">Voltar para a página inicial</a>

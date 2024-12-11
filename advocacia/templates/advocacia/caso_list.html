@@ -1,0 +1,12 @@
+<h1>Lista de Casos</h1>
+<a href="{% url 'criar_caso' %}">Novo Caso</a>
+<ul>
+    {% for caso in casos %}
+        <li>
+            {{ caso.titulo }} - Advogado: {{ caso.advogado.nome }} - 
+            <a href="{% url 'editar_caso' caso.pk %}">Editar</a> | 
+            <a href="{% url 'excluir_caso' caso.pk %}">Excluir</a>
+        </li>
+    {% endfor %}
+</ul>
+<a href="{% url 'pagina_inicial' %}">Voltar para a página inicial</a>

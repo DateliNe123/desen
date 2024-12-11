@@ -1,0 +1,7 @@
+<h1>Excluir Caso</h1>
+<p>Tem certeza de que deseja excluir o caso "{{ caso.titulo }}"?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Sim, excluir</button>
+    <a href="{% url 'lista_casos' %}">Cancelar</a>
+</form>

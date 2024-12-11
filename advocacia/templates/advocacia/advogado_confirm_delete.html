@@ -1,0 +1,7 @@
+<h1>Excluir Advogado</h1>
+<p>Tem certeza de que deseja excluir o advogado "{{ advogado.nome }}"?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Sim, excluir</button>
+    <a href="{% url 'lista_advogados' %}">Cancelar</a>
+</form>
